@@ -32,3 +32,25 @@ https://api.github.com/${account}/${repository}/dispatches
 Basic authentication with personal token (no username) 
 
 Client payload will be available in ${{ github.event.client_payload.environment }} in workflow job.
+
+Branches filter can use patterns:
+
+```yaml
+on:
+  pull_request:
+    branches:
+    - main
+    - "release/**"
+    - "!release/v1" # Do not run on release/v1 branch
+```
+
+branches-ignore: Mutually exclusive with branches:
+
+```yaml
+on:
+  push:
+    branches-ignore:
+    - main
+```
+
+We can also use use tags or tags-ignore, paths or paths-ignore is same manner.
