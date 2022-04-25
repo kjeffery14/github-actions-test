@@ -2,6 +2,8 @@
 name: "Shell commands sample"
 on:
   push:
+    branches:
+    - develop
 jobs:
   run-shell-command:
     runs-on: ubuntu-latest
