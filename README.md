@@ -54,3 +54,5 @@ on:
 ```
 
 We can also use use tags or tags-ignore, paths or paths-ignore is same manner.
+
+Patterns can include ranges: feature/feat[ABC]
