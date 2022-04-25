@@ -1,7 +1,7 @@
 ---
 name: "Shell commands sample"
 on:
-- push
+  push:
 jobs:
   run-shell-command:
     runs-on: ubuntu-latest
